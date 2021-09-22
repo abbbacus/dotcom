@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "donec",
+    "description": "interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus",
+    "state": "powered-on",
+    "created_at": "2020-06-08T10:45:00Z",
+    "updated_at": "2020-06-24T16:49:12Z"
+  },
+  {
+    "id": 2,
+    "name": "libero rutrum ac",
+    "description": "posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum",
+    "state": "on-standby",
+    "created_at": "2020-05-02T20:58:01Z",
+    "updated_at": "2021-04-25T17:14:12Z"
+  },
+  {
+    "id": 3,
+    "name": "odio porttitor id",
+    "description": "erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst",
+    "state": "powered-off",
+    "created_at": "2020-08-18T02:19:54Z",
+    "updated_at": "2020-12-21T04:15:14Z"
+  },
+  {
+    "id": 4,
+    "name": "pellentesque",
+    "description": "et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui",
+    "state": "powered-on",
+    "created_at": "2020-05-15T16:12:15Z",
+    "updated_at": "2020-06-05T15:55:41Z"
+  },
+  {
+    "id": 5,
+    "name": "ultrices",
+    "description": "diam in magna bibendum imperdiet nullam orci pede venenatis non",
+    "state": "powered-on",
+    "created_at": "2020-08-21T22:15:52Z",
+    "updated_at": "2020-06-11T13:34:55Z"
+  }
+]
