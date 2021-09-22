@@ -11,7 +11,7 @@ type ColorModeSwitcherProps = Omit<IconButtonProps, "aria-label">
 
 export const ColorModeSwitcher: React.FC<ColorModeSwitcherProps> = (props) => {
   const { toggleColorMode } = useColorMode();
-  const iconColor = useColorModeValue("whisper.600", "whiteAlpha.900");
+  const iconColor = useColorModeValue("whisper.600", "whisper.600");
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(RiMoonFill, RiMoonFill);
 

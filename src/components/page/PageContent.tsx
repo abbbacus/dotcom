@@ -7,7 +7,7 @@ function PageContent({children}: {
   children: React.ReactNode,
 }) {
   return (
-    <Box flexGrow={1} padding={10}>
+    <Box flexGrow={1} padding={10} overflow="scroll" boxShadow="inner">
       {children}
     </Box>
   );

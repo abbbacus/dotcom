@@ -9,9 +9,7 @@ import {
   Grid,
   GridItem,
   HStack,
-  StackDivider,
   Text,
-  VStack,
 } from "@chakra-ui/react";
 import {
   ColorModeSwitcher,
@@ -27,8 +25,8 @@ function Activity() {
   return (
     <GridItem layerStyle="gridDark" overflow="hidden" borderLeftWidth="1px" borderRightWidth="1px">
       <Flex direction="column" height="full">
-        <VStack divider={<StackDivider />} flexGrow={1}>
-          <HStack spacing={4} align="flex-start" justify="flex-start" padding={6} paddingBottom={4} width="full" height={20}>
+        <Flex direction="column" flexGrow={1}>
+          <HStack spacing={4} align="flex-start" justify="flex-start" padding={6} paddingBottom={4} width="full" height={20} flexShrink={0}>
             <Avatar src="https://i.pravatar.cc/100?img=60" size="sm" name={user.name}>
               <AvatarBadge bg="brand.secondary" borderColor="whisper.100" boxSize="0.8em" borderWidth="thin" />
             </Avatar>
@@ -37,10 +35,11 @@ function Activity() {
               <Text fontSize="xs" isTruncated>{user.email}</Text>
             </Box>
           </HStack>
-          <HStack flexGrow={1}>
-            <Center fontStyle="italic" color="whisper.500" fontWeight="semibold">Modules</Center>
+          <Divider marginTop={2} />
+          <HStack flexGrow={1} boxShadow="inner" width="full">
+            <Center fontStyle="italic" color="whisper.500" fontWeight="semibold" width="100%">Modules</Center>
           </HStack>
-        </VStack>
+        </Flex>
         
         <Divider />
         

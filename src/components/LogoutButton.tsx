@@ -7,7 +7,7 @@ import {
 import { RiDoorLockFill } from "react-icons/ri";
 
 function LogoutButton() {
-  const iconColor = useColorModeValue("whisper.600", "whiteAlpha.900");
+  const iconColor = useColorModeValue("whisper.600", "whisper.600");
 
   return (
     <IconButton

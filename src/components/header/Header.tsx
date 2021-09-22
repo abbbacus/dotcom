@@ -1,20 +1,35 @@
 import React from "react";
 import {
-  Box,
   Divider,
+  Grid,
+  Flex,
   Text,
 } from "@chakra-ui/react";
-import {
-  IHeaderProps,
-} from "../../types/header";
+import capitalize from "lodash/capitalize";
 
-function Header({title}: IHeaderProps) {
+function Header({title, actions}:  {
+  title: string,
+  actions?: React.ReactNode,
+}) {
   return (
     <>
-      <Box height={20} padding={6} paddingBottom={4}>
-        <Text fontSize="2xl" fontWeight="semibold">{title}</Text>
-      </Box>
-      <Divider marginY={2} />
+      <Grid 
+        height={20}
+        padding={6}
+        paddingBottom={4}
+        flexShrink={0}
+        templateColumns="auto auto"
+      >
+        <Flex align="center">
+          <Text fontSize="2xl" fontWeight="semibold">{capitalize(title)}</Text>
+        </Flex>
+        {actions && (
+          <Flex align="center" justify="flex-end">
+            {actions}
+          </Flex>
+        )}
+      </Grid>
+      <Divider marginTop={2} />
     </>
   );
 }
