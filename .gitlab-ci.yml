@@ -15,7 +15,9 @@ build:
   artifacts:
     paths:
       - build/          # Save the build result as an artfact
-
+  rules:
+    - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"'
+    
 pages:
   image: alpine:latest
   stage: deploy
@@ -27,4 +29,5 @@ pages:
   artifacts:
     paths:
       - public
-
+  rules:
+    - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"'
