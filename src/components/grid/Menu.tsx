@@ -16,9 +16,12 @@ import {
   RiSettings4Line,
 } from "react-icons/ri";
 import {
+  TiFlowChildren,
+} from "react-icons/ti";
+import {
   EMenuItemType,
 } from "../../types/menu";
-import ERoutes from "../../routes";
+import ERoutes, { ERouteNames } from "../../routes";
 import MenuLink from "../menu/MenuLink";
 import MenuButton from "../menu/MenuButton";
 import MenuContext from "../../context/MenuContext";
@@ -49,8 +52,9 @@ function Menu() {
 
           <VStack align="flex-start" divider={<StackDivider />}>
             <VStack spacing={0} width="full" align="flex-start">
-              <MenuLink icon={RiLayoutMasonryLine} text="Dashboard" path={ERoutes.dashboard} />
-              <MenuLink icon={RiBarChartGroupedLine} text="Rankers" path={ERoutes.rankers} />
+              <MenuLink icon={RiLayoutMasonryLine} text={ERouteNames.dashboard} path={ERoutes.dashboard} />
+              <MenuLink icon={TiFlowChildren} text={ERouteNames.pipelines} path={ERoutes.pipelines} />
+              <MenuLink icon={RiBarChartGroupedLine} text={ERouteNames.rankers} path={ERoutes.rankers} />
             </VStack>
             <VStack spacing={0} width="full" align="flex-start">
               <MenuButton icon={RiSettings4Line} text="Settings" />

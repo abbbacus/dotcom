@@ -18,6 +18,7 @@ function AppLayout() {
         height="full"
         width="full"
         templateColumns={appMenuExpanded ? "250px auto 275px 48px" : "68px auto 275px 48px"}
+        templateRows="minmax(675px, 100%)"
       >
         <Menu />
         <GridItem>
