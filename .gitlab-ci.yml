@@ -9,7 +9,7 @@ build:
   stage: build
   variables:
     # Replace this with your site URL
-    PUBLIC_URL: https://binarymason.gitlab.io/a6s
+    PUBLIC_URL: https://abbbacus.gitlab.io/dotcom
   script:
     - yarn install      # Run `yarn install` and `yarn build`
     - yarn build
