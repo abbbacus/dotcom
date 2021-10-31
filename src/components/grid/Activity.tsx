@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   Avatar,
   AvatarBadge,
@@ -15,24 +15,28 @@ import {
   ColorModeSwitcher,
 } from "../ColorModeSwitcher";
 import LogoutButton from "../LogoutButton";
+import AuthContext from "../../context/AuthContext";
 
 function Activity() {
-  const [user] = useState<Record<string, string>>({
-    "name": "Jackson Marshall",
-    "email": "marsh.jackson@example.com",
-  });
+  const [name, setName] = useState<string>('');
+  const { user } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (!user) return;
+    setName(user.firstName + ' ' + user.lastName);
+  }, [user, setName]);
 
   return (
     <GridItem layerStyle="gridDark" overflow="hidden" borderLeftWidth="1px" borderRightWidth="1px">
       <Flex direction="column" height="full">
         <Flex direction="column" flexGrow={1}>
           <HStack spacing={4} align="flex-start" justify="flex-start" padding={6} paddingBottom={4} width="full" height={20} flexShrink={0}>
-            <Avatar src="https://i.pravatar.cc/100?img=60" size="sm" name={user.name}>
+            <Avatar src="https://i.pravatar.cc/100?img=60" size="sm" name={name}>
               <AvatarBadge bg="brand.secondary" borderColor="whisper.100" boxSize="0.8em" borderWidth="thin" />
             </Avatar>
             <Box overflow="hidden">
-              <Text fontWeight="bold" fontSize="sm" isTruncated>{user.name}</Text>
-              <Text fontSize="xs" isTruncated>{user.email}</Text>
+              <Text fontWeight="bold" fontSize="sm" isTruncated>{name}</Text>
+              <Text fontSize="xs" isTruncated>{user?.email}</Text>
             </Box>
           </HStack>
           <Divider marginTop={2} />

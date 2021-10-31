@@ -5,12 +5,19 @@ import {
   GridItem,
 } from "@chakra-ui/react";
 import Activity from "./components/grid/Activity";
+import AuthContext from "./context/AuthContext";
+import LoginPage from "./page/LoginPage";
 import Menu from "./components/grid/Menu";
 import MenuContext from "./context/MenuContext";
 import Navigator from "./components/grid/Navigator";
 
 function AppLayout() {
   const { appMenuExpanded } = useContext(MenuContext);
+  const { user } = useContext(AuthContext);
+
+  if (!user) {
+    return <LoginPage />
+  }
 
   return (
     <Center height="100vh" width="100vw">
