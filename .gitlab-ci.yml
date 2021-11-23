@@ -5,7 +5,7 @@ stages:
 
 # This will run on every branch
 build:
-  image: node:latest    # Run the job in a `node` docker image
+  image: node:16    # Run the job in a `node` docker image
   stage: build
   variables:
     # Replace this with your site URL
