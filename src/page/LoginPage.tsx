@@ -45,13 +45,19 @@ function LoginPage() {
           >
             <chakra.img src={illustration} width="60%" />
             <Box paddingX={10}>
-              <Text fontSize="2xl" fontWeight="semibold">Lorem ipsum dolor</Text>
-              <Text fontSize="md" fontWeight="light" marginTop={4}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias repellat, error at iusto fugit quam.
-              </Text>
+                <Text fontSize="2xl" fontWeight="semibold">Lorem ipsum dolor</Text>
+                <Text fontSize="md" fontWeight="light" marginTop={4}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias repellat, error at iusto fugit quam.
+                </Text>
             </Box>
           </VStack>
-          <Grid backgroundColor="white" gridTemplateRows="100px auto" paddingX={[8,8,8,16]} paddingY={16}>
+          <Grid 
+            backgroundColor="white"
+            color="brand.primary"
+            gridTemplateRows="100px auto"
+            paddingX={[8,8,8,16]}
+            paddingY={16}
+          >
             <HStack height="25px">
               <LogoMark height="100%" />
               <Text fontSize="md" fontWeight="bold">Abbbacus</Text>

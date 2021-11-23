@@ -61,61 +61,78 @@ function LoginForm() {
         marginTop={8}
       >
         <FormControl isInvalid={Boolean(errors.email)}>
-          <FormLabel htmlFor="email"><LightMode>Email</LightMode></FormLabel>
-          <Input
-            id="email"
-            type="email"
-            placeholder="Enter your email"
-            focusBorderColor="brand.primary"
-            size="lg"
-            {...register("email", {
-              required: "This field is required.",
-            })}
-          />
-          {errors.email && <FormErrorMessage>{errors.email.message}</FormErrorMessage>}
+          <FormLabel htmlFor="email">Email</FormLabel>
+          <LightMode>
+            <Input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              focusBorderColor="brand.primary"
+              borderColor="gray.200"
+              size="lg"
+              sx={{
+                "::placeholder": {
+                  color: "gray.400"
+                }
+              }}
+              {...register("email", {
+                required: "This field is required.",
+              })}
+            />
+            {errors.email && <FormErrorMessage>{errors.email.message}</FormErrorMessage>}
+          </LightMode>
         </FormControl>
 
         <FormControl isInvalid={Boolean(errors.password)}>
           <FormLabel htmlFor="password">Password</FormLabel>
-          <InputGroup>
-            <Input
-              id="password"
-              type={showPassword ? "text" : "password"}
-              placeholder="Enter your password"
-              focusBorderColor="brand.primary"
-              size="lg"
-              {...register("password", {
-                required: "This field is required.",
-              })}
-            />
-
-            <InputRightElement height="full">
-              <IconButton
-                size="sm"
-                fontSize={20}
-                variant="ghost"
-                icon={<Icon as={showPassword ? RiEyeOffFill : RiEyeFill} />}
-                aria-label="Log out"
-                height="auto"
-                minWidth="0"
-                onClick={() => setShowPassword(!showPassword)}
-                _active={{ bg: "transparent" }}
-                _hover={{ bg: "transparent" }}
+          <LightMode>
+            <InputGroup>
+              <Input
+                id="password"
+                type={showPassword ? "text" : "password"}
+                placeholder="Enter your password"
+                focusBorderColor="brand.primary"
+                borderColor="gray.200"
+                size="lg"
+                sx={{
+                  "::placeholder": {
+                    color: "gray.400"
+                  }
+                }}
+                {...register("password", {
+                  required: "This field is required.",
+                })}
               />
-            </InputRightElement>
-          </InputGroup>
-          {errors.password && <FormErrorMessage>{errors.password.message}</FormErrorMessage>}
+              <InputRightElement height="full">
+                <IconButton
+                  size="sm"
+                  fontSize={20}
+                  variant="ghost"
+                  icon={<Icon as={showPassword ? RiEyeOffFill : RiEyeFill} />}
+                  aria-label="Log out"
+                  height="auto"
+                  minWidth="0"
+                  onClick={() => setShowPassword(!showPassword)}
+                  _active={{ bg: "transparent" }}
+                  _hover={{ bg: "transparent" }}
+                />
+              </InputRightElement>
+            </InputGroup>
+            {errors.password && <FormErrorMessage>{errors.password.message}</FormErrorMessage>}
+          </LightMode>
         </FormControl>
-
-        <Button
-          type="submit"
-          isFullWidth
-          isLoading={loading}
-          marginTop="8"
-          size="lg"
-        >
-          Sign In
-        </Button>
+ 
+        <LightMode>
+          <Button
+            type="submit"
+            isFullWidth
+            isLoading={loading}
+            marginTop="8"
+            size="lg"
+          >
+            Sign In
+          </Button>
+        </LightMode>
       </Box>
     </Box>
   )
