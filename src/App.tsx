@@ -8,15 +8,20 @@ import {
 import {
   MenuProvider,
 } from "./context/MenuContext";
+import {
+  AuthProvider,
+} from "./context/AuthContext";
 import AppLayout from "./AppLayout";
 import appTheme from "./theme/theme";
 
 export const App = () => (
   <ChakraProvider theme={appTheme}>
     <BrowserRouter>
-      <MenuProvider>
-        <AppLayout />
-      </MenuProvider>
+      <AuthProvider>
+        <MenuProvider>
+          <AppLayout />
+        </MenuProvider>
+      </AuthProvider>
     </BrowserRouter>
   </ChakraProvider>
 );

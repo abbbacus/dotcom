@@ -29,6 +29,11 @@ const appTheme = extendTheme({
     body: "Inter, sans-serif",
   },
 
+  sizes: {
+    viewH: "100vh",
+    viewW: "100vw",
+  },
+
   styles: {
     global: (props: StyleFunctionProps) => ({
       "body": {
@@ -41,6 +46,9 @@ const appTheme = extendTheme({
       "*, *::before, &::after": {
         borderColor: mode("gray.200", "whiteAlpha.300")(props),
       },
+      ".chakra-form-control + .chakra-form-control": {
+        marginTop: 4,
+      }
     }),
   },
 
