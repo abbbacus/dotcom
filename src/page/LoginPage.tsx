@@ -1,5 +1,5 @@
 import React from "react";
-import { 
+import {
   Box,
   Container,
   Flex,
@@ -13,7 +13,7 @@ import LoginForm from "../components/LoginForm";
 import { LogoMark } from "../Logo";
 import illustration from "../example_illustration.svg";
 
-function LoginPage() {    
+function LoginPage() {
   return (
     <Flex
       alignItems="center"
@@ -36,7 +36,7 @@ function LoginPage() {
           templateColumns={["", "", "repeat(2, 1fr)"]}
           width="full"
         >
-          <VStack 
+          <VStack
             display={["none", "", "flex"]}
             justifyContent="center"
             color="whiteAlpha.800"
@@ -51,7 +51,7 @@ function LoginPage() {
                 </Text>
             </Box>
           </VStack>
-          <Grid 
+          <Grid
             backgroundColor="white"
             color="brand.primary"
             gridTemplateRows="100px auto"

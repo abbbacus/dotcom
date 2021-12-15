@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { 
+import {
   Box,
   Button,
   FormControl,
-  FormErrorMessage, 
+  FormErrorMessage,
   FormLabel,
   Icon,
   IconButton,
@@ -42,7 +42,7 @@ function LoginForm() {
       // setTimeout to simulate waiting for a response, can be removed later
       setTimeout(async () => {
         const response = await api.post("/api/sessions", data);
-        setUser(response.data.data);    
+        setUser(response.data.data);
         setLoading(false);
       }, 3000);
     } catch (error) {
@@ -55,7 +55,7 @@ function LoginForm() {
       <Text fontSize="2xl" fontWeight="extrabold">Log In</Text>
       <Text fontSize="sm" marginTop={4}>Enter your email and password to login to the dashboard.</Text>
 
-      <Box 
+      <Box
         as="form"
         onSubmit={handleSubmit(onSubmit)}
         marginTop={8}
@@ -121,7 +121,7 @@ function LoginForm() {
             {errors.password && <FormErrorMessage>{errors.password.message}</FormErrorMessage>}
           </LightMode>
         </FormControl>
- 
+
         <LightMode>
           <Button
             type="submit"

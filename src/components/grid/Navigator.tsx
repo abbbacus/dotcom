@@ -16,7 +16,7 @@ function Navigator() {
 
       <Route exact path={ERoutes.pipelines} component={PipelinesIndex} />
       <Route path={`${ERoutes.pipelines}/:pipelineId`} component={PipelinesShow} />
-  
+
       <Route exact path={ERoutes.rankers} component={RankersPage} />
     </Switch>
   );

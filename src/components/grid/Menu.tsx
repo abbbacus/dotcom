@@ -34,7 +34,7 @@ function Menu() {
     <GridItem layerStyle="gridDark" overflow="hidden" borderRightWidth="1px">
       <Flex direction="column" height="full">
         <Box flexGrow={1}>
-          <HStack 
+          <HStack
             align="center"
             justify={appMenuExpanded ? "flex-start" : "center"}
             paddingBottom={12}
@@ -64,7 +64,7 @@ function Menu() {
 
         <Box>
           <Divider />
-          <MenuButton 
+          <MenuButton
             icon={RiLayoutLeftFill}
             text={appMenuExpanded ? "Collapse Menu": "Expand Menu"}
             type={EMenuItemType.secondary}

@@ -19,7 +19,7 @@ function PipelinesShow() {
   // data needed for this pipeline if not in the original data
 
   useEffect(() => {
-    
+
   }, []);
   */
 

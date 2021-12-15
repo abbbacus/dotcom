@@ -44,9 +44,9 @@ function Activity() {
             <Center fontStyle="italic" color="whisper.500" fontWeight="semibold" width="100%">Modules</Center>
           </HStack>
         </Flex>
-        
+
         <Divider />
-        
+
         <Grid templateColumns="auto auto auto">
           <Box paddingX={6} paddingY={3} justifyContent="center" display="flex">
             <ColorModeSwitcher />

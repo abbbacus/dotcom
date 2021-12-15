@@ -16,7 +16,7 @@ function Table({ children, headers }: {
   useEffect(() => {
     if (!headers) return;
 
-    headers.length ? setShowTableHeader(true) : setShowTableHeader(false); 
+    headers.length ? setShowTableHeader(true) : setShowTableHeader(false);
   }, [headers, setShowTableHeader])
 
   return (

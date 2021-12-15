@@ -5,7 +5,7 @@ import PageLayout from "../components/page/PageLayout";
 import {
   Center,
 } from "@chakra-ui/react"
-import { 
+import {
   ERouteNames,
 } from "../routes";
 

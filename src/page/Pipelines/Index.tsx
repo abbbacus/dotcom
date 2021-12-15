@@ -43,7 +43,7 @@ function PipelinesIndex() {
   }, [loading, setLoading, setPipelines])
 
   return (
-    <PageLayout 
+    <PageLayout
       headerTitle={ERouteNames.pipelines}
       headerActions={<Button size="sm" variant="outline" leftIcon={<RiAddLine />}>Add Pipeline</Button>}
     >
@@ -62,11 +62,11 @@ function PipelinesIndex() {
                     <Td>
                       <HStack spacing={4}>
                         <Avatar size="sm" icon={<Icon as={RiDonutChartFill} boxSize={7} />} />
-                        <Link 
+                        <Link
                           as={ReactRouterLink}
                           to={{
                             pathname: `${match.url}/${pipeline.id}`,
-                            state: { 
+                            state: {
                               pipeline,
                             },
                           }}

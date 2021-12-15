@@ -13,7 +13,7 @@ function Header({title, actions}:  {
 }) {
   return (
     <>
-      <Grid 
+      <Grid
         height={20}
         padding={6}
         paddingBottom={4}
