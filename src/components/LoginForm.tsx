@@ -41,7 +41,7 @@ function LoginForm() {
     try {
       // setTimeout to simulate waiting for a response, can be removed later
       setTimeout(async () => {
-        const response = await api.post("/sessions", data);
+        const response = await api.post("/api/sessions", data);
         setUser(response.data.data);    
         setLoading(false);
       }, 3000);
